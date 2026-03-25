@@ -1,0 +1,77 @@
+/* Global */
+:root {
+    --board-color: #2c3e50;
+    --player1-color: #e74c3c;
+    --player2-color: #f1c40f;
+    --empty-color: #ecf0f1;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a; 
+    color: #ffffff;           
+    text-align: center;
+    padding: 20px;
+}
+
+/* Layouts */
+#game-info {
+    margin-bottom: 20px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(7, 60px); 
+    grid-template-rows: repeat(6, 60px);    
+    gap: 10px;
+    background-color: var(--board-color);
+    padding: 15px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px auto;
+    border: 5px solid #34495e;
+}
+
+/* Game broad elements */
+.cell {
+    width: 60px;
+    height: 60px;
+    background-color: var(--empty-color);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.piece {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.p1 { background-color: var(--player1-color); }
+.p2 { background-color: var(--player2-color); }
+
+/* Reset button */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover { background-color: #2980b9; }
+
+.new-piece {
+    animation: drop 0.5s ease-out;
+}
+
+@keyframes drop {
+    from { transform: translateY(-300px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

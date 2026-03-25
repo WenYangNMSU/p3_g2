@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect 4 - Local Multiplayer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Connect 4</h1>
+    <div id="game-info">
+        <p id="status-text">Player 1's Turn</p>
+        <button id="reset-btn">Reset Game</button>
+    </div>
+    
+    <div id="board-container">
+        <div id="game-board"></div>
+    </div>
+	<script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
